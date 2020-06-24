@@ -6,7 +6,10 @@ final class IdentifierTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(Identifier().text, "Hello, World!")
+        let id = Identifier<Int>("Test")
+        XCTAssertEqual(id, "Test")
+        XCTAssertEqual(id.value, "Test")
+        XCTAssertNotEqual(id, "Another Id")
     }
 
     static var allTests = [
