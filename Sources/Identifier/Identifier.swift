@@ -15,6 +15,10 @@ public struct Identifier<T>:Hashable,ExpressibleByStringLiteral,Codable {
     public init(stringLiteral value: StringLiteralType) {
         self.value = value
     }
+    
+    public init<U>(_ other:Identifier<U>) {
+        self.value = other.value
+    }
 }
 
 extension Identifier:CustomStringConvertible {
